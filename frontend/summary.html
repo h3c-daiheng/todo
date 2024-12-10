@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作总结</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- 添加代码高亮样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css">
+    <!-- 添加 Markdown 编辑器样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-menu">
+            <a href="index.html">待办事项</a>
+            <a href="summary.html" class="active">工作总结</a>
+        </nav>
+        
+        <h1>工作总结</h1>
+        
+        <div class="summary-editor">
+            <textarea id="summaryEditor"></textarea>
+            <div class="editor-actions">
+                <button onclick="saveSummary()" class="primary-button">
+                    <i class="fas fa-save"></i> 保存总结
+                </button>
+            </div>
+        </div>
+        
+        <div class="summary-list">
+            <h2>历史总结</h2>
+            <div id="summaryList"></div>
+        </div>
+    </div>
+    
+    <!-- 添加代码高亮脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+    <!-- 添加 Markdown 编辑器脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+    <script src="js/summary.js"></script>
+</body>
+</html> 

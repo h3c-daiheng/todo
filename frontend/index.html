@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-menu">
+            <a href="index.html" class="active">待办事项</a>
+            <a href="summary.html">工作总结</a>
+        </nav>
+
+        <h1>待办事项列表</h1>
+        
+        <div class="add-todo">
+            <input type="text" id="todoTitle" placeholder="输入待办事项标题">
+            <textarea id="todoDescription" placeholder="输入描述（可选）"></textarea>
+            <div class="priority-selector">
+                <div class="selector-group">
+                    <label>重要程度：</label>
+                    <select id="todoImportance">
+                        <option value="high">重要</option>
+                        <option value="normal" selected>普通</option>
+                        <option value="low">不重要</option>
+                    </select>
+                </div>
+                <div class="selector-group">
+                    <label>紧急程度：</label>
+                    <select id="todoUrgency">
+                        <option value="high">紧急</option>
+                        <option value="normal" selected>普通</option>
+                        <option value="low">不紧急</option>
+                    </select>
+                </div>
+            </div>
+            <div class="date-selector">
+                <label>预计完成时间：</label>
+                <input type="datetime-local" id="todoDueDate">
+            </div>
+            <button onclick="addTodo()">添加</button>
+        </div>
+
+        <div class="quadrant-view">
+            <div class="quadrant urgent-important">
+                <h2>紧急且重要</h2>
+                <div class="quadrant-list" id="urgent-important-list"></div>
+            </div>
+            <div class="quadrant important-not-urgent">
+                <h2>重要不紧急</h2>
+                <div class="quadrant-list" id="important-not-urgent-list"></div>
+            </div>
+            <div class="quadrant urgent-not-important">
+                <h2>紧急不重要</h2>
+                <div class="quadrant-list" id="urgent-not-important-list"></div>
+            </div>
+            <div class="quadrant not-urgent-not-important">
+                <h2>不紧急不重要</h2>
+                <div class="quadrant-list" id="not-urgent-not-important-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html> 

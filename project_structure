@@ -1,0 +1,17 @@
+todo_project/
+├── backend/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── routes.py
+│   │   └── database.py
+│   ├── instance/
+│   │   └── todos.db
+│   ├── requirements.txt
+│   └── run.py
+└── frontend/
+    ├── index.html
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── main.js 
